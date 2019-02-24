@@ -1,5 +1,6 @@
 package org.pomelo.designpatterns.abstractFactory.MazeComponent;
 
-public class Wall {
+public abstract class Wall extends BaseComponent{
 
+	
 }

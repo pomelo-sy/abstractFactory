@@ -1,10 +1,6 @@
 package org.pomelo.designpatterns.abstractFactory.MazeComponent;
 
-public abstract class Maze {
+public abstract class BaseComponent {
 
-	abstract void addRoom(Room r);
-	
-	
-	
-	
+	public abstract void enter();
 }

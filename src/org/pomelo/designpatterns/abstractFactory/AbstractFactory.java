@@ -7,12 +7,12 @@ import org.pomelo.designpatterns.abstractFactory.MazeComponent.Wall;
 
 public abstract class AbstractFactory {
 
-	abstract Maze makeMaze();
+	public abstract Maze makeMaze();
 	
-	abstract Room makeRoom(int roomId); 
+	public abstract Room makeRoom(int roomId); 
 	
-	abstract Wall makeWall();
+	public abstract Wall makeWall();
 	
-	abstract Door makeDoor(Room r1, Room r2);
+	public abstract Door makeDoor(Room r1, Room r2);
 	
 }
