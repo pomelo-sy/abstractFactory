@@ -7,6 +7,10 @@ import org.pomelo.designpatterns.abstractFactory.MazeComponent.Room;
 public class RoomWithABomb extends Room{
 	
 	
+	public RoomWithABomb(int roomId) {
+		setRoomId(roomId);
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 

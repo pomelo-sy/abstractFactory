@@ -5,25 +5,27 @@ import org.pomelo.designpatterns.abstractFactory.MazeComponent.Door;
 import org.pomelo.designpatterns.abstractFactory.MazeComponent.Maze;
 import org.pomelo.designpatterns.abstractFactory.MazeComponent.Room;
 import org.pomelo.designpatterns.abstractFactory.MazeComponent.Wall;
+import org.pomelo.designpatterns.abstractFactory.MazeComponent.BombComponent.BombedWall;
+import org.pomelo.designpatterns.abstractFactory.MazeComponent.BombComponent.RoomWithABomb;
 
 public class BombFactory extends AbstractFactory{
 
 	@Override
 	public Maze makeMaze() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return new Maze();
 	}
 
 	@Override
 	public Room makeRoom(int roomId) {
 		// TODO Auto-generated method stub
-		return null;
+		return new RoomWithABomb(roomId);
 	}
 
 	@Override
 	public Wall makeWall() {
 		// TODO Auto-generated method stub
-		return null;
+		return new BombedWall();
 	}
 
 	@Override
