@@ -1,0 +1,24 @@
+删除用户坐在目录 userdel -r 
+若用户正在使用 可 -f 强制 但危险 已登录的该用户操作可能造成系统不一致
+
+ll /proc/sys/fs/inotify/
+(1)./proc/sys/fs/inotify/max_queued_events：调用inotify_init时分配到inotify instance中可排队的event数的最大值，超出值时的事件被丢弃，但会触发队列溢出Q_OVERFLOW事件。
+(2)./proc/sys/fs/inotify/max_user_instances：每一个real user可创建的inotify instances数量的上限。
+(3)./proc/sys/fs/inotify/max_user_watches：每个inotify实例相关联的watches的上限，即每个inotify实例可监控的最大目录、文件数量。如果监控的文件数目巨大，需要根据情况适当增加此值。
+echo 30000000 > /proc/sys/fs/inotify/max_user_watches
+
+删除用户坐在目录 userdel -r  remove home directory
+若用户正在使用 可 -f 强制 但危险 已登录的该用户操作可能造成系统不一致
+
+https://passport.csdn.net/account/login
+
+创建的家目录不是默认的化 需要将/etc/skel中配置文件cp到家目录下面
+
+SHA256:ei1cWh8+HFhW9IAQMWvpiFWMN9UupmAGfffIPOwFEfw dbs3@192.168.1.223
+
+useradd -d /home/storage/app1-app2/ app1-app2
+
+ssh known_hosts 作用
+参数StrictHostKeyChecking 。。意思
+
+
